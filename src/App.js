@@ -4,13 +4,16 @@ import BootstrapComponant from './componants/BootstrapComponants/BootstrapCompon
 import ChildComponant from './componants/ChildComponant1/ChildComponant1';
 import Counter from './componants/ChildComponant2/Counter';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Products from './componants/BootstrapComponants/Products';
 
 function App() {
   return (
     <div className="App">
       <BootstrapComponant />
-      {/* <ChildComponant />
+      {/* <ChildComponan
+      t />
       <Counter />  */}
+      <Products />
       
 
       
