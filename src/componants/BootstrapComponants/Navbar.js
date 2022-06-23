@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 import { Form } from 'react-bootstrap'
 import {Container ,Navbar, Nav} from 'react-bootstrap'
+import photologo from '../../assests/photo_app.jpg'
+
 
 
 function BootstrapComponant() {
@@ -9,7 +11,16 @@ function BootstrapComponant() {
     <>
         <Navbar bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="#home">Vish's Shop</Navbar.Brand>
+                
+                <img
+                    alt=""
+                    src={photologo}
+                    width="30"
+                    height="30"
+                    className="d-inline-block align-top"
+                    style={{borderRadius: "50%"}}
+                />{' '}
+                <Navbar.Brand href="#home">Photo App</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
