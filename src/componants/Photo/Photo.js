@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 import axios, { Axios } from 'axios'
-import { Col, Container ,Row,Card,Button} from 'react-bootstrap'
+import { Col, Container ,Row,Card,Button,Anchor} from 'react-bootstrap'
+import './Photo.css'
 
 
 export default function Photo() {
@@ -122,12 +123,12 @@ export default function Photo() {
                     <Col md = {4} key = {photo.id}>
                     <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={photo.download_url} />
-                            <Card.Body>
+                            <Card.Body className='cardBody'>
                                 <Card.Title>Card Title</Card.Title>
                                 <Card.Text>
                                 {photo.author}
                                 </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
+                                <Button variant="dark"><Anchor href= {photo.url} target = "_blank" >link</Anchor></Button>
                             </Card.Body>
                     </Card>
                </Col>)
