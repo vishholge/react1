@@ -24,8 +24,8 @@ function BootstrapComponant() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">AboutUs</Nav.Link>
+                        <Nav.Link href="#Home">Home</Nav.Link>
+                        <Nav.Link href="#about">AboutUs</Nav.Link>
                                                         
                     </Nav>
                     <Nav>

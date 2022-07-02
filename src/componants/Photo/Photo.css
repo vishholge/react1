@@ -1,3 +1,7 @@
 .cardBody{
+    
     text-align: start !important;
+}
+Button{
+    margin-left: 0.2rem;
 }

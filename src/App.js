@@ -8,7 +8,7 @@ import Products from './componants/BootstrapComponants/Products';
 import Photo from './componants/Photo/Photo';
 import About from './componants/About/About';
 
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import { Routes,Route } from 'react-router-dom';
 
 
 
@@ -17,20 +17,25 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 function App() {
   return (
     
-      <div className="App">
+    <div className='app'>
+        <Navbar/>
+        {/* <ChildComponan
+        t />
+        <Counter />  */}
+        {/* <Products /> */}
+        <Routes>
+            <Route path="/" element={<Photo />} />
+            <Route path="about" element={<About />} />
+        </Routes>
+
+    </div>
+
+
+      
         
-          <Navbar/>
-          {/* <ChildComponan
-          t />
-          <Counter />  */}
-          {/* <Products /> */}
-          <Routes>
-              <Route path="/" element={<Photo />} />
-              <Route path="about" element={<About />} />
-          </Routes>
 
           
-        </div>
+        
     
   );
 }

@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 import axios, { Axios } from 'axios'
-import { Col, Container ,Row,Card,Button,Anchor,Spinner} from 'react-bootstrap'
+import { Col, Container ,Row,Card,Button,Anchor,Spinner,Badge} from 'react-bootstrap'
 import './Photo.css'
+import {AiFillLike} from "react-icons/ai"
+import {FaComment} from "react-icons/fa"
+
 
 
 export default function Photo() {
@@ -50,6 +53,12 @@ export default function Photo() {
                                 {photo.author}
                                 </Card.Text>
                                 <Button variant="dark"><Anchor href= {photo.url} style = {{ color: "white",textDecoration: "none"}} target = "_blank" >View</Anchor></Button>
+                               
+                                <Button style={{marginLeft: "28px"}} variant = "lite"><AiFillLike/> <Badge bg="dark">23</Badge></Button>
+                                <Button variant = "lite"><FaComment/> <Badge bg="dark">535</Badge></Button>
+
+                            
+                                
                             </Card.Body>
                     </Card>
                </Col>)
