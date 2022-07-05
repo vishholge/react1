@@ -1,12 +1,13 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import "./About.css"
 
-export default function About() {
+const   About = () => {
   return (
     <>
-      <Container>
-        <main>
+      <Container className='about'>
+        
           <h1>
               About
           </h1>
@@ -17,7 +18,7 @@ export default function About() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia asperiores molestias rerum deserunt quas corporis, officia esse aliquam nulla eligendi accusamus recusandae ducimus laborum minima quos animi facilis ipsa fugit dolor id quidem? Incidunt numquam sed ullam consequuntur nobis explicabo fugit culpa.
           </p>
 
-        </main>
+        
         {/* <nav>
           <Link to = "/"
         </nav> */}
@@ -25,3 +26,4 @@ export default function About() {
     </>
   )
 }
+export default About

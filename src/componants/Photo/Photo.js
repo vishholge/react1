@@ -5,20 +5,21 @@ import { Col, Container ,Row,Card,Button,Anchor,Spinner,Badge} from 'react-boots
 import './Photo.css'
 import {AiFillLike} from "react-icons/ai"
 import {FaComment} from "react-icons/fa"
+import { Link } from 'react-router-dom'
 
 
 
 export default function Photo() {
-    const [photos,setPhotos]= useState([
-        {
-          "id": "0",
-          "author": "Alejandro Escamilla",
-          "width": 5616,
-          "height": 3744,
-          "url": "https://unsplash.com/photos/yC-Yzbqy7PY",
-          "download_url": "https://picsum.photos/id/0/5616/3744"
-        },
-       ])
+    const [photos,setPhotos]= useState([]
+        // {
+        //   "id": "0",
+        //   "author": "Alejandro Escamilla",
+        //   "width": 5616,
+        //   "height": 3744,
+        //   "url": "https://unsplash.com/photos/yC-Yzbqy7PY",
+        //   "download_url": "https://picsum.photos/id/0/5616/3744"
+        // },
+       );
     // useEffect(() => {
     //     axios.get("https://picsum.photos/v2/list")
     //     .then(res => console.log(res))
@@ -28,13 +29,14 @@ export default function Photo() {
         const getphotos = async () => {
             try{
                 const res = await axios.get("https://picsum.photos/v2/list");
+                setPhotos(res.data);
                
             }catch(err){
               
             }
         }
         getphotos();
-    })
+    },[])
 
    
   return (
@@ -52,7 +54,8 @@ export default function Photo() {
                                 <Card.Text>
                                 {photo.author}
                                 </Card.Text>
-                                <Button variant="dark"><Anchor href= {photo.url} style = {{ color: "white",textDecoration: "none"}} target = "_blank" >View</Anchor></Button>
+                                {/* <Button variant="dark"><Anchor href= {photo.url} style = {{ color: "white",textDecoration: "none"}} target = "_blank" >View</Anchor></Button> */}
+                                <Link className="btn btn-dark" to={`/photos/${photo.id}/${photo.author}`}>View</Link>
                                
                                 <Button style={{marginLeft: "28px"}} variant = "lite"><AiFillLike/> <Badge bg="dark">23</Badge></Button>
                                 <Button variant = "lite"><FaComment/> <Badge bg="dark">535</Badge></Button>
