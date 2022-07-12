@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
-import axios, { Axios } from 'axios'
-import { Col, Container ,Row,Card,Button,Anchor,Spinner,Badge} from 'react-bootstrap'
+import axios from 'axios'
+import { Col, Container ,Row,Card,Button,Spinner,Badge} from 'react-bootstrap'
 import './Photo.css'
 import {AiFillLike} from "react-icons/ai"
 import {FaComment} from "react-icons/fa"
 import { Link } from 'react-router-dom'
-import { incrementCounter,decrementCounter } from '../Redux/LIkeComment/action'
+import { incrementCounter } from '../Redux/LIkeComment/action'
 import { useSelector, useDispatch } from 'react-redux'
 
 

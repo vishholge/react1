@@ -5,7 +5,7 @@ import { Spinner } from "react-bootstrap";
 
 
 const EnlargedPhoto = () => {
-  const { id,heading } = useParams();
+  const { id } = useParams();
   const [singlePhoto, setSinglePhoto] = useState({});
 
   useEffect(() => {

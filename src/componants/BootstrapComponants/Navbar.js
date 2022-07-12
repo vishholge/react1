@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { useState } from 'react'
 import { Modal,Button ,Row,Col,InputGroup,} from 'react-bootstrap'
 
@@ -6,7 +6,7 @@ import { Form } from 'react-bootstrap'
 import {Container ,Navbar, Nav} from 'react-bootstrap'
 import photologo from '../../assests/photo_app.jpg'
 import { NavLink } from 'react-router-dom'
-import Signup from '../Signup/Signup'
+// import Signup from '../Signup/Signup'
 import Confirmpass from '../Signup/Confirmpass'
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt,FaKey,FaLock} from "react-icons/fa";
