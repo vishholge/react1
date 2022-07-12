@@ -1,7 +1,6 @@
 import React from 'react'
 
-export default function Confirmpass() {
-   
+export default function Signup() {
   return (
     <div>
       

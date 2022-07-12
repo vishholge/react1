@@ -7,7 +7,7 @@ import {Container ,Navbar, Nav} from 'react-bootstrap'
 import photologo from '../../assests/photo_app.jpg'
 import { NavLink } from 'react-router-dom'
 // import Signup from '../Signup/Signup'
-import Confirmpass from '../Signup/Confirmpass'
+
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt,FaKey,FaLock} from "react-icons/fa";
 
@@ -134,7 +134,7 @@ function BootstrapComponant() {
                                 </Form.Group>
                                 <Form.Group as={Col} md="6" controlId="validationCustom05">
                                 <Form.Label><FaKey></FaKey> Confirm Password</Form.Label>
-                                <Form.Control type="password" placeholder="confirm Password" onKeyUp={<Confirmpass/>} required />
+                                <Form.Control type="password" placeholder="confirm Password"  required />
                                 <Form.Control.Feedback type="invalid">
                                     password doesn't match.
                                 </Form.Control.Feedback>
