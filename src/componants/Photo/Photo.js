@@ -6,6 +6,9 @@ import './Photo.css'
 import {AiFillLike} from "react-icons/ai"
 import {FaComment} from "react-icons/fa"
 import { Link } from 'react-router-dom'
+import { incrementCounter,decrementCounter } from '../Redux/LIkeComment/action'
+import { useSelector, useDispatch } from 'react-redux'
+
 
 
 
@@ -25,6 +28,8 @@ export default function Photo() {
     //     .then(res => console.log(res))
     //     .catch(err => console.log(err))
     // },[])
+    const count = useSelector((state) => state.count)
+    const dispatch = useDispatch()
     useEffect( () => {
         const getphotos = async () => {
             try{
@@ -57,7 +62,7 @@ export default function Photo() {
                                 {/* <Button variant="dark"><Anchor href= {photo.url} style = {{ color: "white",textDecoration: "none"}} target = "_blank" >View</Anchor></Button> */}
                                 <Link className="btn btn-dark" to={`/photos/${photo.id}/${photo.author}`}>View</Link>
                                
-                                <Button style={{marginLeft: "28px"}} variant = "lite"><AiFillLike/> <Badge bg="dark">23</Badge></Button>
+                                <Button style={{marginLeft: "28px"}} variant = "lite" onClick = {() => dispatch(incrementCounter(1))}><AiFillLike/>  <Badge bg="dark">{count}</Badge></Button>
                                 <Button variant = "lite"><FaComment/> <Badge bg="dark">535</Badge></Button>
 
                             
